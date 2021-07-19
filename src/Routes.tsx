@@ -5,7 +5,7 @@ import HomePage from "./app/HomePage";
 const Routes = () => {
   return (
       <Router>
-          <Route path="/" exact component={HomePage} />
+          <Route path="/new-world" exact component={HomePage} />
       </Router>
   )
 };
