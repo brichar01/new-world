@@ -32,7 +32,7 @@ const HomePage = () => {
     <Layout> 
       <Header>
         <h1>new World();</h1>
-        <h3>Hello World</h3>
+        <h3>Hello World!</h3>
       </Header>
       <Body>
         Welcome to the new world blog the premier source for this imaginary futuristic RPG.
