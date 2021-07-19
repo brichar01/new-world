@@ -1,5 +1,6 @@
 {
   "name": "new-world",
+  "homepage": "new-world",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
