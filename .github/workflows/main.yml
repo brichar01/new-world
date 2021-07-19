@@ -12,6 +12,17 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v1
 
+    - name: Use Node.js 14
+      uses: actions/setup-node@v1
+      with:
+        node-version: 14
+    - name: Npm Install
+      run: |
+        npm install
+    - name: Production Build
+      run: |
+        npm run build
+
     - name: Configure AWS Credentials
       uses: aws-actions/configure-aws-credentials@v1
       with:
