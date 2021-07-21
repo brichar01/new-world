@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from "@emotion/styled";
+import Articles from './Articles';
+import ArticleProvider from '../providers/ArticleProvider';
 
 const Layout = styled.div({
     display: 'grid',
@@ -33,15 +35,17 @@ const HomePage = () => {
       <Header>
         <h1>new World();</h1>
         <h3>Hello World!</h3>
+        Welcome to the new world blog the premier source for this imaginary futuristic RPG.
       </Header>
       <Body>
-        Welcome to the new world blog the premier source for this imaginary futuristic RPG.
+        <ArticleProvider>
+          <Articles />
+        </ArticleProvider>
       </Body>
       <Footer>
         Ben Pty Ltd.
       </Footer>
     </Layout>
-
   )
 };
 
