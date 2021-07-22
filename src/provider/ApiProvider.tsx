@@ -5,9 +5,14 @@ type Props = {
 };
 
 const ApiProvider = (props: Props) => {
-  const uri = 'https://localhost:44331/';
+  const base = 'https://localhost:44331';
+  const options = {
+    mode: 'no-cors'
+  } as RequestInit;
   const get = function <T>(path: string) {
-    return fetch(uri + path).then((r: Response) => r.body) as Promise<T>;
+    return fetch(base + path, options).then((r: Response) => {
+      return r.body;
+    }) as Promise<T>;
   };
 
   return (

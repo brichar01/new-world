@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from "@emotion/styled";
 import Articles from './Articles';
-import ArticleProvider from '../providers/ArticleProvider';
+import { ArticleProvider } from '../provider/ArticleProvider';
 
 const Layout = styled.div({
     display: 'grid',
@@ -38,7 +38,7 @@ const HomePage = () => {
         Welcome to the new world blog the premier source for this imaginary futuristic RPG.
       </Header>
       <Body>
-        <ArticleProvider>
+        <ArticleProvider pageSize={ 5 }>
           <Articles />
         </ArticleProvider>
       </Body>
