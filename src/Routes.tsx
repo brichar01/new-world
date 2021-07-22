@@ -3,7 +3,7 @@ import { Redirect, Route, Switch, useRouteMatch } from "react-router-dom";
 import HomePage from "./app/HomePage";
 
 const Routes = () => {
-  let { path, url } = useRouteMatch();
+  let { path } = useRouteMatch();
 
   return (
     <div>

@@ -22,10 +22,10 @@ const ApiProvider = (props: Props) => {
   );
 };
 
-type ApiContext = {
+type DefaultApiContext = {
   get: <T>(path: string) => Promise<T>
 };
 
-export const ApiContext = createContext({} as ApiContext);
+export const ApiContext = createContext({} as DefaultApiContext);
 
 export default ApiProvider;
