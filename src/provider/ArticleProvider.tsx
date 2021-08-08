@@ -17,7 +17,7 @@ export const ArticleProvider = (props: Props) => {
 
   useEffect(() => {
     api.get<Article>("/article/60f65d0a29f6ceb3a004b5de").then((article: Article) => {
-      console.log(article)
+      console.log(article);
       setLoading(false);
       setArticle(article);
     });

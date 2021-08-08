@@ -1,12 +1,14 @@
 
 export type ArticleSummary = {
-  articleSummary: string,
+  summary: string,
   authorId: string,
-  timestamp: Date
+  timeStamp: Date
 };
 
 export type Article = {
+  id: string,
   articleContent: string,
+  summary: string,
   authorId: string,
   timestamp: Date
 };

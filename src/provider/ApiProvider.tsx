@@ -5,13 +5,18 @@ type Props = {
 };
 
 const ApiProvider = (props: Props) => {
-  const base = 'https://localhost:44331';
+  const base = "http://newworldapi.australiaeast.azurecontainer.io";
   const options = {
-    mode: 'no-cors'
+    mode: 'cors',
+    headers: {
+      'Content-Type': 'application/json'
+    }
   } as RequestInit;
+
   const get = function <T>(path: string) {
     return fetch(base + path, options).then((r: Response) => {
-      return r.body;
+      console.log(r)
+      return r.json();
     }) as Promise<T>;
   };
 

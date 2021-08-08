@@ -11,11 +11,7 @@ const Articles = () => {
         <div>
           {article.articleContent}
         </div>)}
-    </div>
-    
-    
-   
-    )
+    </div>)
 }
 
 export default Articles;
