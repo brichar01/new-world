@@ -1,4 +1,4 @@
-﻿import React, { createContext, useContext, useEffect, useState } from 'react';
+import React, { createContext, useContext, useEffect, useState } from 'react';
 import { ArticleSummary } from '../model/Article';
 import { ApiContext } from './ApiProvider';
 
