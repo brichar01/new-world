@@ -2,7 +2,7 @@
 export type ArticleSummary = {
   summary: string,
   authorId: string,
-  timeStamp: Date
+  timeStamp: string
 };
 
 export type Article = {
@@ -10,5 +10,5 @@ export type Article = {
   articleContent: string,
   summary: string,
   authorId: string,
-  timestamp: Date
+  timestamp: string
 };

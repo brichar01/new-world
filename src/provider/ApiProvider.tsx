@@ -1,11 +1,12 @@
 import React, { createContext } from 'react';
 
 type Props = {
-  children: React.ReactElement
+  children: React.ReactElement,
 };
 
 const ApiProvider = (props: Props) => {
   const base = "http://newworldapi.australiaeast.azurecontainer.io";
+
   const options = {
     mode: 'cors',
     headers: {
@@ -13,9 +14,9 @@ const ApiProvider = (props: Props) => {
     }
   } as RequestInit;
 
-  const get = function <T>(path: string) {
-    return fetch(base + path, options).then((r: Response) => {
-      console.log(r)
+  const get = function <T>(path: string, params: URLSearchParams | null = null) {
+
+    return fetch(`${base}${path}?${params && params.toString()}`, options).then((r: Response) => {
       return r.json();
     }) as Promise<T>;
   };
@@ -28,7 +29,7 @@ const ApiProvider = (props: Props) => {
 };
 
 type DefaultApiContext = {
-  get: <T>(path: string) => Promise<T>
+  get: <T>(path: string, params: URLSearchParams | null) => Promise<T>
 };
 
 export const ApiContext = createContext({} as DefaultApiContext);

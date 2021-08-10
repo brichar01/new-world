@@ -1,15 +1,15 @@
 import React, { useContext } from 'react';
-import { ArticleContext } from '../provider/ArticleProvider';
+import { ArticleSummaryContext } from '../provider/ArticleSummaryProvider';
 
 const Articles = () => {
-  const { loading, article } = useContext(ArticleContext);
+  const { loading, articles } = useContext(ArticleSummaryContext);
 
   return (
     <div>
       {loading && (<div>Loading</div>)}
       {!loading && (
         <div>
-          {article.articleContent}
+          { articles.map((article) => { return (<div key={article.timeStamp}>{article.summary}</div>) } ) }
         </div>)}
     </div>)
 }

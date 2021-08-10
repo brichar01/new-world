@@ -4,7 +4,7 @@ import { ApiContext } from './ApiProvider';
 
 type Props = {
   children: React.ReactElement,
-  pageSize: number
+  articleId: string
 };
 
 export const ArticleContext = createContext({ loading: true, article: {} as Article});
@@ -16,10 +16,9 @@ export const ArticleProvider = (props: Props) => {
   const api = useContext(ApiContext);
 
   useEffect(() => {
-    api.get<Article>("/article/60f65d0a29f6ceb3a004b5de").then((article: Article) => {
-      console.log(article);
-      setLoading(false);
+    api.get<Article>(`/article/${props.articleId}`, null).then((article: Article) => {
       setArticle(article);
+      setLoading(false);
     });
   }, [api]);
 
