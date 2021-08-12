@@ -6,7 +6,7 @@ const Article = () => {
     const { article, loading } = useContext(ArticleContext);
 
     return(
-         <div>{!loading && article}</div>
+         <div>{!loading && article.articleContent}</div>
     );
 };
 
