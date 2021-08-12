@@ -1,5 +1,6 @@
 import { useRouteMatch } from "react-router-dom";
-import { ArticleContext, ArticleProvider } from "../provider/ArticleProvider";
+import { ArticleProvider } from "../provider/ArticleProvider";
+import Article from "./Article";
 
 const ArticleContainer = () => {
   const { path } = useRouteMatch();
@@ -8,3 +9,6 @@ const ArticleContainer = () => {
       <Article />
     </ArticleProvider>
     );
+};
+
+export default ArticleContainer;

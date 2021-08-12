@@ -1,5 +1,6 @@
 import React from 'react';
 import { Redirect, Route, Switch, useRouteMatch } from "react-router-dom";
+import ArticleContainer from './app/ArticleContainer';
 import HomePage from "./app/HomePage";
 
 const Routes = () => {
