@@ -16,11 +16,11 @@ export const ArticleProvider = (props: Props) => {
   const api = useContext(ApiContext);
 
   useEffect(() => {
-    api.get<Article>(`/article/${props.articleId}`, null).then((article: Article) => {
+    api.get<Article>(`/article/${props.articleId}`, null).then((article: Article) => {  
       setArticle(article);
       setLoading(false);
     });
-  }, [api]);
+  }, [api, props.articleId]);
 
   return (
     <ArticleContext.Provider value={{ loading: loading, article: article }}>{props.children}</ArticleContext.Provider>

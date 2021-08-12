@@ -1,5 +1,6 @@
 
 export type ArticleSummary = {
+  id: string,
   summary: string,
   authorId: string,
   timeStamp: string

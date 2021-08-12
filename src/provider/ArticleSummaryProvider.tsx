@@ -22,7 +22,6 @@ export const ArticleSummaryProvider = (props: Props) => {
       setLoading(false);
     });
   }, [api, props.pageNum, props.pageSize]);
-
   return (
     <ArticleSummaryContext.Provider value={{ loading: loading, articles: articles }}>{props.children}</ArticleSummaryContext.Provider>
     );
