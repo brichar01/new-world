@@ -1,11 +1,12 @@
-import { useRouteMatch } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { ArticleProvider } from "../provider/ArticleProvider";
 import Article from "./Article";
 
 const ArticleContainer = () => {
-  const { path } = useRouteMatch();
+  const { id } = useParams<{id: string}>();
+  console.log(id)
   return (
-    <ArticleProvider articleId={path}>
+    <ArticleProvider articleId={id}>
       <Article />
     </ArticleProvider>
     );

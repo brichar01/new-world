@@ -16,7 +16,7 @@ const ApiProvider = (props: Props) => {
 
   const get = function <T>(path: string, params: URLSearchParams | null = null) {
 
-    return fetch(`${base}${path}?${params && params.toString()}`, options).then((r: Response) => {
+    return fetch(`${base}${path}${(!!params && `?${params.toString()}`) || ''}`, options).then((r: Response) => {
       return r.json();
     }) as Promise<T>;
   };

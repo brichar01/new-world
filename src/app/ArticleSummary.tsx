@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { ArticleSummary } from '../model/Article';
 
 type Props = {
@@ -9,8 +9,8 @@ type Props = {
 const ArticlePreview = (props: Props) => {
     const { summary, id } = props.articleSummary;
     return(
-        <NavLink to={`/article/${id}`}>{summary}</NavLink>
+        <Link to={`/new-world/article/${id}`}>{summary}</Link>
     )
 };
 
-export default ArticlePreview;z
+export default ArticlePreview;

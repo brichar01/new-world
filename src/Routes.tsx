@@ -10,7 +10,7 @@ const Routes = () => {
     <div>
       <Switch>
         <Route path={`${path}/home`} exact component={HomePage} />
-        <Route path={`${path}/article/{articleID}`} exact component={ArticleContainer} />
+        <Route path={`${path}/article/:id`} component={ArticleContainer} />
         <Route path="/"><Redirect to={`${path}/home`} /></Route>
       </Switch>
     </div>
