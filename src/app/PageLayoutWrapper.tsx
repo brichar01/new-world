@@ -44,9 +44,7 @@ const PageLayoutWrapper = () => {
       <Body>
         <Switch>
           <Route path={`${path}/article/:id`} component={ArticleContainer}/>
-          <Route path={`${path}`}>
-            <ArticleSummaryList />
-          </Route>
+          <Route path={`${path}`} component={ArticleSummaryList}/>
         </Switch>
       </Body>
       <Footer>

@@ -9,7 +9,10 @@ type Props = {
 const ArticlePreview = (props: Props) => {
     const { summary, id } = props.articleSummary;
     return(
-        <Link to={`/new-world/article/${id}`}>{summary}</Link>
+        <div>
+            <Link to={`/new-world/article/${id}`}>{summary}</Link>
+        </div>
+        
     )
 };
 

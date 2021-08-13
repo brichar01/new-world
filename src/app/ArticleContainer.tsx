@@ -6,9 +6,11 @@ const ArticleContainer = () => {
   const { id } = useParams<{id: string}>();
   console.log(id)
   return (
-    <ArticleProvider articleId={id}>
-      <Article />
-    </ArticleProvider>
+      <div>
+        <ArticleProvider articleId={id}>
+          <Article />
+        </ArticleProvider>
+      </div>
     );
 };
 
