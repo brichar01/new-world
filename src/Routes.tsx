@@ -1,7 +1,6 @@
 import React from 'react';
-import { Redirect, Route, Switch, useRouteMatch } from "react-router-dom";
-import ArticleContainer from './app/ArticleContainer';
-import HomePage from "./app/HomePage";
+import { Route, Switch, useRouteMatch } from "react-router-dom";
+import PageLayoutWrapper from "./app/PageLayoutWrapper";
 
 const Routes = () => {
   let { path } = useRouteMatch();
@@ -9,9 +8,7 @@ const Routes = () => {
   return (
     <div>
       <Switch>
-        <Route path={`${path}/home`} exact component={HomePage} />
-        <Route path={`${path}/article/:id`} component={ArticleContainer} />
-        <Route path="/"><Redirect to={`${path}/home`} /></Route>
+        <Route path={`${path}`} component={PageLayoutWrapper} />
       </Switch>
     </div>
   )
